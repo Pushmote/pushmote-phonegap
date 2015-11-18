@@ -1,12 +1,12 @@
 # Pushmote PhoneGap/Cordova Plugin
 
-##How to add Pushmote PhoneGap/Cordova Plugin
+## How to add Pushmote PhoneGap/Cordova Plugin
 
 First add pushmote-phonegap-plugin by using phonegap cli
 
     phonegap plugin add pushmote-phonegap-plugin
 
-###For iOS
+### For iOS
 
 This plugin requires modifications to your AppDelegate.m. Append the following line just below other imports.
     
@@ -22,7 +22,7 @@ add following line part
         [Pushmote handleNotification:notification];
     }
     
-###For Android
+### For Android
 
 This plugin requires modifications to MainActivity.java. Append the following line just below other imports.
     

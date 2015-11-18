@@ -1,6 +1,6 @@
 {
   "name": "pushmote-phonegap-plugin",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "PhoneGap/Cordova plugin for Pushmote",
   "cordova": {
     "id": "pushmote-phonegap-plugin",
@@ -26,5 +26,5 @@
   "bugs": {
     "url": "https://github.com/Pushmote/pushmote-phonegap/issues"
   },
-  "homepage": "https://github.com/Pushmote/pushmote-phonegap#readme"
+  "homepage": "https://github.com/Pushmote/pushmote-phonegap"
 }
