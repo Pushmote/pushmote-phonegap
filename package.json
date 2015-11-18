@@ -1,0 +1,30 @@
+{
+  "name": "pushmote-phone-plugin",
+  "version": "1.0.0",
+  "description": "PhoneGap/Cordova plugin for Pushmote.",
+  "cordova": {
+    "id": "pushmote-phonegap-plugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pushmote/pushmote-phonegap.git"
+  },
+  "keywords": [
+    "Pushmote",
+    "Estimote",
+    "Beacons",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Pushmote, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pushmote/pushmote-phonegap/issues"
+  },
+  "homepage": "https://github.com/Pushmote/pushmote-phonegap"
+}

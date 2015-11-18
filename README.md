@@ -1,0 +1,1 @@
+# Pushmote PhoneGap/Cordova plugin

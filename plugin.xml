@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="pushmote-phonegap-plugin"
+	version="1.0.0">
+
+	<name>Pushmote</name>
+	<description>PhoneGap/Cordova plugin for Pushmote.</description>
+	<license>MIT</license>
+	<keywords>Pushmote, Estimote, Beacon</keywords>
+
+    <platform name="android">
+        <framework src="plugin/src/android/pushmote.gradle" custom="true" type="gradleReference" />
+
+        <resource-file src="plugin/src/android/pushmote-sdk.aar" target="libs/pushmote-sdk.aar" />
+        <resource-file src="plugin/src/android/estimote-sdk-preview.aar" target="libs/estimote-sdk-preview.aar" />
+    </platform>
+	<platform name="ios">
+		<framework src="CoreBluetooth.framework" />
+		<framework src="CoreLocation.framework" />
+
+		<framework src="plugin/src/ios/Frameworks/PushmoteSDK.framework" custom="true" />
+    <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+        <string>This is required for iBeacon experience.</string>
+    </config-file>
+	</platform>
+</plugin>
