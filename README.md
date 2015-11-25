@@ -8,7 +8,11 @@ First add pushmote-phonegap-plugin by using phonegap cli
 
 ### For iOS
 
-This plugin requires modifications to your AppDelegate.m. Append the following line just below other imports.
+This plugin requires modifications to your AppDelegate.m. You can find AppDelegeta.m under this directory;
+
+    PROJECT_DIR/platforms/ios/YOUR_PROJECT_NAME/Classes/AppDelegate.m
+
+Append the following line just below other imports.
     
     #import <PushmoteSDK/Pushmote.h>
 
@@ -24,7 +28,11 @@ add following line part
     
 ### For Android
 
-This plugin requires modifications to MainActivity.java. Append the following line just below other imports.
+This plugin requires modifications to MainActivity.java. You can find MainActivity.java under this directory;
+
+    PROJECT_DIR/platforms/android/src/YOUR_PROJECT_PACKAGE/MainActivity.java
+
+Append the following line just below other imports.
     
     import com.pushmote.android.Pushmote;
     
