@@ -9,17 +9,41 @@
 	<license>MIT</license>
 	<keywords>Pushmote, Estimote, Beacon</keywords>
 
+    <js-module src="plugin/www/pushmote.js" name="Pushmote">
+        <clobbers target="Pushmote" />
+    </js-module>
     <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Pushmote" >
+                <param name="android-package" value="com.pushmote.android.phonegap.PushmotePlugin"/>
+            </feature>
+        </config-file>
+        
         <framework src="plugin/src/android/pushmote.gradle" custom="true" type="gradleReference" />
 
         <resource-file src="plugin/src/android/pushmote-sdk.aar" target="libs/pushmote-sdk.aar" />
         <resource-file src="plugin/src/android/estimote-sdk-preview.aar" target="libs/estimote-sdk-preview.aar" />
+
+        <source-file src="plugin/src/android/com/pushmote/android/phonegap/PushmotePlugin.java" target-dir="src/android/com/pushmote/android/phonegap/" />
+
     </platform>
 	<platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Pushmote">
+                <param name="ios-package" value="PushmotePlugin"/>
+            </feature>
+        </config-file>
 		<framework src="CoreBluetooth.framework" />
 		<framework src="CoreLocation.framework" />
 
 		<framework src="plugin/src/ios/Frameworks/PushmoteSDK.framework" custom="true" />
+
+		<source-file src="plugin/src/ios/AppDelegate+notification.m" />
+		<source-file src="plugin/src/ios/PushmotePlugin.m" />
+
+		<header-file src="plugin/src/ios/AppDelegate+notification.h" />
+		<header-file src="plugin/src/ios/PushmotePlugin.h" />
+
     <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
         <string>This is required for iBeacon experience.</string>
     </config-file>
