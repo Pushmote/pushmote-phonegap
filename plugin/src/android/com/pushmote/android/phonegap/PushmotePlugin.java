@@ -44,7 +44,7 @@ public class PushmotePlugin extends CordovaPlugin {
             pushContext = callbackContext;
             try {
                 String appId = data.getJSONObject(0).getString("appId");
-                Pushmote.start(Pushmote.HWProvider.ESTIMOTE,getApplicationContext(),appId);
+                Pushmote.start(Pushmote.HWProvider.ESTIMOTE,this.cordova.getActivity(),appId);
                 JSONObject json = new JSONObject().put("message", "pushmote started");
                 Log.v(LOG_TAG, "onRegistered: " + json.toString());
                 PushmotePlugin.sendEvent(json);
