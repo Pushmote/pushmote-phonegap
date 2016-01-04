@@ -22,7 +22,7 @@
         <framework src="plugin/src/android/pushmote.gradle" custom="true" type="gradleReference" />
 
         <resource-file src="plugin/src/android/pushmote-sdk.aar" target="libs/pushmote-sdk.aar" />
-        <resource-file src="plugin/src/android/estimote-sdk-preview.aar" target="libs/estimote-sdk-preview.aar" />
+        <resource-file src="plugin/src/android/estimote-sdk.aar" target="libs/estimote-sdk.aar" />
 
         <source-file src="plugin/src/android/com/pushmote/android/phonegap/PushmotePlugin.java" target-dir="src/android/com/pushmote/android/phonegap/" />
 
